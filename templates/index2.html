@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Fraud Detection</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    
+    
+        
+    	<input type="text" name="Age" placeholder="Age" required="required" />
+      <br>
+      <br>
+      
+        <input type="text" name="Amount_Spent" placeholder="AmountSpent" required="required" />
+        <br>
+      <br>
+                     
+             <input type="text" name="odds2" placeholder="odds2" required="required" />
+             <br>
+              <br>
+      
+		<input type="text" name="No_Transactions" placeholder="No Of Transactions" required="required" />
+    <br>
+      <br>
+        <input type="text" name="No_Bettings" placeholder="No of Bettings" required="required" />
+
+        <br>
+      <br>
+        <input type="text" name="No_Payments" placeholder="No Of Payments" required="required" />
+        <br>
+      <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <br>
+      <br>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
