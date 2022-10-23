@@ -1,8 +1,8 @@
 Flask==1.1.2
 joblib==1.1.0
-gunicorn==10.1.0
+gunicorn==20.1.0
 itsdangerous==2.0.1
-Jinja2==2.10.1
+Jinja2==2.11.1
 MarkupSafe==2.0.1
 Werkzeug==2.0.3
 numpy>=1.21.5
